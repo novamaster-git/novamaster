@@ -1,23 +1,7 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
-import { makeStyles } from "@material-ui/core/styles";
-import Accordion from "@material-ui/core/Accordion";
-import AccordionSummary from "@material-ui/core/AccordionSummary";
-import AccordionDetails from "@material-ui/core/AccordionDetails";
-import Typography from "@material-ui/core/Typography";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    width: "100%",
-  },
-  heading: {
-    fontSize: theme.typography.pxToRem(22),
-    fontWeight: theme.typography.fontWeightRegular,
-  },
-}));
 const Card = styled.div`
-overflow: hidden;
+  /* overflow: hidden; */
   width: 100%;
   background-color: #eaf6ff;
   border-radius: 10px;
@@ -25,31 +9,31 @@ overflow: hidden;
   display: flex;
   flex-direction: column;
   padding: 20px 40px 40px 40px;
-  margin-bottom:20px;
+  margin-bottom: 20px;
   -webkit-box-shadow: 6px 6px 29px -15px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 6px 6px 29px -15px rgba(0, 0, 0, 0.75);
   box-shadow: 6px 6px 29px -15px rgba(0, 0, 0, 0.75);
-  @media (max-width: 600px){
+  @media (max-width: 600px) {
     padding: 20px 20px 40px 20px;
   }
 `;
-
 const CardTitle = styled.h2`
   width: 100%;
   color: black;
   font-weight: 400;
+  font-size: 28px;
 `;
 const ProjectContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 10px 10px;
+  display: flex;
+  flex-direction: column;
   margin-top: 25px;
 `;
 
 const Discription = styled.p`
-padding:20px 10px;
+  padding: 20px 10px;
   font-family: "Raleway", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 400;
 `;
 
 const TagContainer = styled.div`
@@ -57,101 +41,95 @@ const TagContainer = styled.div`
   display: flex;
   flex-direction: row;
   padding: 10px 20px;
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 const Tag = styled.div`
-  font-size: 12px;
+  font-size: 14px;
   background-color: ${({ color }) => color};
   color: white;
   padding: 5px 10px;
   border-radius: 7px;
   margin: 0px 5px;
+  text-align: center;
+  @media (max-width: 600px) {
+    margin: 5px 10px;
+    width: auto;
+    flex-direction: column;
+  }
 `;
 const VisitButton = styled.a`
-    text-decoration:none;
-    color:white;
-    font-family: "Poppins", sans-sarif;
-    background-color:#512DA8;
-    padding:7px 10px;
-    border-radius:5px;
-    display:inline;
-    float:right;
-    cursor:pointer;
-    &:hover{
-      background-color:#1565C0;
-    }
+  text-decoration: none;
+  color: white;
+  font-family: "Poppins", sans-sarif;
+  background-color: #512da8;
+  padding: 7px 15px;
+  border-radius: 5px;
+  display: inline;
+  float: right;
+  cursor: pointer;
+  &:hover {
+    background-color: #1565c0;
+  }
+`;
+const ProjectCard = styled.div`
+  width: 100%;
+  border: 1px solid #b6b6b6;
+  border-radius: 5px;
+  padding: 20px 20px;
+  background-color: #effcfc;
+  margin: 10px 0px;
+`;
+const ProjectTitle = styled.h3`
+  width: 100%;
+  font-weight: 500;
+  font-family: "Quicksand", sans-serif;
+  font-size: 24px;
 `;
 const ClientCard = (props) => {
-  const classes = useStyles();
   return (
     <Fragment>
       <Card>
         <CardTitle>Client's Projects</CardTitle>
-
         <ProjectContainer>
-          <div className={classes.root}>
-            <Accordion>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-                style={{width : "100%"}}
-              >
-                <Typography className={classes.heading} component={'span'} variant={'body2'} >
-                  Dynamic Resume Site for a Researcher Fellow
-                </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography component={'span'} variant={'body2'}>
-                  <Discription>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Asperiores fuga atque architecto expedita commodi quos id
-                    nobis earum quia adipisci, ratione deserunt sunt cupiditate
-                    culpa. Repellendus similique voluptates consectetur
-                    voluptate!
-                  </Discription>
-                  <p>Languages Used : </p>
-                  <TagContainer>
-                    <Tag color="#F57F17">JavaScript</Tag>
-                    <Tag color="#D84315">Html</Tag>
-                    <Tag color="#4527A0">Css</Tag>
-                    <Tag color="#B71C1C">Node.js + Express</Tag>
-                    <Tag color="#6200EA">MySql</Tag>
-                  </TagContainer>
-                  <VisitButton>Visit Project</VisitButton>
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion style={{marginTop: '10px'}}>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography className={classes.heading} component={'span'} variant={'body2'}>
-                  Food delivery App REST API
-                </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography variant={'body2'} component={'span'}>
-                  <Discription>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Asperiores fuga atque architecto expedita commodi quos id
-                    nobis earum quia adipisci, ratione deserunt sunt cupiditate
-                    culpa. Repellendus similique voluptates consectetur
-                    voluptate!
-                  </Discription>
-                  <p>Languages Used : </p>
-                  <TagContainer>
-                    <Tag color="#F57F17">PHP</Tag>
-                    <Tag color="#B71C1C">laravel</Tag>
-                    <Tag color="#D84315">Html</Tag>
-                    <Tag color="#4527A0">Css</Tag>
-                    <Tag color="#6200EA">MySql</Tag>
-                  </TagContainer>
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-          </div>
+          <ProjectCard>
+            <ProjectTitle>
+              Dynamic Resume Site for a Researcher Fellow
+            </ProjectTitle>
+            <Discription>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores fuga atque architecto expedita commodi quos id nobis
+              earum quia adipisci, ratione deserunt sunt cupiditate culpa.
+              Repellendus similique voluptates consectetur voluptate!
+            </Discription>
+            <p>Languages Used : </p>
+            <TagContainer>
+              <Tag color="#F57F17">JavaScript</Tag>
+              <Tag color="#D84315">Html</Tag>
+              <Tag color="#4527A0">Css</Tag>
+              <Tag color="#6200EA">MySql</Tag>
+              <Tag color="#B71C1C">Node.js + Express</Tag>
+            </TagContainer>
+            <VisitButton>Visit Project</VisitButton>
+          </ProjectCard>
+          <ProjectCard>
+            <ProjectTitle>Food delivery App REST API</ProjectTitle>
+            <Discription>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores fuga atque architecto expedita commodi quos id nobis
+              earum quia adipisci, ratione deserunt sunt cupiditate culpa.
+              Repellendus similique voluptates consectetur voluptate!
+            </Discription>
+            <p>Languages Used : </p>
+            <TagContainer>
+              <Tag color="#F57F17">PHP</Tag>
+              <Tag color="#B71C1C">laravel</Tag>
+              <Tag color="#D84315">Html</Tag>
+              <Tag color="#4527A0">Css</Tag>
+              <Tag color="#6200EA">MySql</Tag>
+            </TagContainer>
+          </ProjectCard>
         </ProjectContainer>
       </Card>
     </Fragment>

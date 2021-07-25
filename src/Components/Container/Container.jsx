@@ -7,20 +7,29 @@ const ContainerTag = Styled.div`
     align-items:center;
 `;
 const TotalContainer = Styled.div`
-    width: 55%;
+    /* width: 55%; */
     height: auto;
-    @media (max-width: 1366px){
+    @media only screen and (max-width: 1920px){
+      width: 65%;
+      /* display:none; */
+    }
+    @media only screen and (max-width: 1555px){
       width: 75%;
     }
-    @media (max-width: 1555px){
-      width: 65%;
+    @media only screen and (max-width: 1366px){
+      width: 75%;
     }
-    @media (max-width: 1280px){
-      width: 85%;
+    @media only screen and (max-width: 1280px){
+      width: 80%;
     }
-    @media (max-width: 499px){
+    @media only screen and (max-width: 499px){
       width:90%;
     }
+
+
+
+
+    
 `;
 const HeroSection = (props) => {
   return (

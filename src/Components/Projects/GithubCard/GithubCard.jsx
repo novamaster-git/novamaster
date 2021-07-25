@@ -1,17 +1,21 @@
 import React, { useState, useEffect } from "react";
+import LoadingEffect from "react-spinners/BeatLoader";
 import styled from "styled-components";
 const Card = styled.div`
   width: 100%;
   background-color: #2c3e50;
   border-radius: 10px;
   margin-top: 40px;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 20px 40px 40px 40px;
   -webkit-box-shadow: 6px 6px 29px -15px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 6px 6px 29px -15px rgba(0, 0, 0, 0.75);
   box-shadow: 6px 6px 29px -15px rgba(0, 0, 0, 0.75);
-  @media (max-width: 499px){
+  @media (max-width: 499px) {
     padding: 20px 20px 40px 20px;
   }
 `;
@@ -25,10 +29,10 @@ const RepoContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px 10px;
   margin-top: 25px;
-  @media (max-width: 800px){
+  @media (max-width: 800px) {
     grid-template-columns: 1fr;
   }
-  @media (max-width: 499px){
+  @media (max-width: 499px) {
     grid-template-columns: 1fr;
   }
 `;
@@ -62,9 +66,7 @@ const RepoCards = styled.div`
 `;
 const fetchGit = async (url) => {
   try {
-    var repos = await fetch(
-      url
-    );
+    var repos = await fetch(url);
     var reposJson = await repos.json();
     return reposJson;
   } catch (ex) {
@@ -73,12 +75,14 @@ const fetchGit = async (url) => {
 };
 
 const GithubCard = (props) => {
-  const url="https://api.github.com/users/novamaster-official/repos";
+  const url = "https://api.github.com/users/novamaster-git/repos";
   useEffect(() => {
     fetchGit(url)
       .then((result) => {
-        setDone(true);
-        setData(result);
+        setTimeout(() => {
+          setDone(true);
+          setData(result);
+        }, 1000);
       })
       .catch((err) => {
         console.log(err);
@@ -87,7 +91,11 @@ const GithubCard = (props) => {
   const [done, setDone] = useState(false);
   const [data, setData] = useState([]);
   if (!done) {
-    return <div>Loading...</div>;
+    return (
+      <Card>
+        <LoadingEffect size={30} margin={2} color={"#5B9BFC"} />
+      </Card>
+    );
   } else {
     return (
       <Card>
