@@ -208,7 +208,7 @@ const HeroSection = (props) => {
           <h1>Soumen Samanta</h1>
           <p className="ability">MERN STACK DEVELOPER | ELECTRONICS ENGINEER</p>
           <p className="desc">
-            I am Self Taught and motivated Programmer who is Passionate about
+            I am a Self-Taught and motivated Programmer who is Passionate about
             learning new things.Now I want to be a part of an Organization/Team
             to build production level code.
           </p>
