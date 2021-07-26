@@ -42,14 +42,14 @@ const Skills = () => {
                   color="linear-gradient(to right, #7f00ff, #e100ff)"
                 />
                 <SkillsCard
+                  title="React Native"
+                  progress="70%"
+                  color="linear-gradient(to right, #fc4a1a, #f7b733)"
+                />
+                <SkillsCard
                   title="Bootstrap"
                   progress="90%"
                   color="linear-gradient(to right, #ff9966, #ff5e62)"
-                />
-                <SkillsCard
-                  title="p5.js"
-                  progress="60%"
-                  color="linear-gradient(to right, #fc4a1a, #f7b733)"
                 />
               </Column>
               <Column>
@@ -138,9 +138,7 @@ const Skills = () => {
             </Row>
           )}
         </Fragment>
-        <CardTitle>
-          #Skills
-        </CardTitle>
+        <CardTitle>#Skills</CardTitle>
         <div
           style={{
             display: "flex",

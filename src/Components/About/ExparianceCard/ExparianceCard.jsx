@@ -66,7 +66,6 @@ const Column = styled.div`
   }
 `;
 const Timeline = styled.div`
-
   width: 100%;
   .sessions {
     position: relative;
@@ -182,15 +181,7 @@ const ExparianceCard = () => {
                 <ul className="sessions">
                   <li>
                     <div className="time">As a Freelancer</div>
-                    <p>Since 2019</p>
-                  </li>
-                  <li>
-                    <div className="time">Mobotics</div>
                     <p>Since 2020</p>
-                  </li>
-                  <li>
-                    <div className="time">Microsoft Corporation</div>
-                    <p>Since 2023</p>
                   </li>
                 </ul>
               )}

@@ -32,10 +32,40 @@ const Footer = (props) => {
           2021
         </div>
         <div className="copyright">
-          <a href="www.google.com">LinkedIn</a> |{" "}
-          <a href="www.google.com">Github</a>
+          <a
+            href="https://www.linkedin.com/in/soumen-samanta/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+          |
+          <a
+            href="https://github.com/novamaster-git"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Github
+          </a>
         </div>
-        <div style={{color:'transparent'}}>Icons made by <a style={{color:'transparent'}} href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" style={{color:'transparent'}} title="Flaticon">www.flaticon.com</a></div>
+        <div style={{ color: "transparent" }}>
+          Icons made by{" "}
+          <a
+            style={{ color: "transparent" }}
+            href="https://www.freepik.com"
+            title="Freepik"
+          >
+            Freepik
+          </a>{" "}
+          from{" "}
+          <a
+            href="https://www.flaticon.com/"
+            style={{ color: "transparent" }}
+            title="Flaticon"
+          >
+            www.flaticon.com
+          </a>
+        </div>
       </FooterCard>
     </Fragment>
   );

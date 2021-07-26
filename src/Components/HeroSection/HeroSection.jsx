@@ -1,4 +1,6 @@
 import React, { Fragment } from "react";
+import { AwesomeButton } from "react-awesome-button";
+import "react-awesome-button/dist/styles.css";
 import styled from "styled-components";
 import Profile from "../../res/img/Profile.jpg";
 import Goggles from "../../res/img/losisdos.png";
@@ -75,6 +77,31 @@ const ImageContainer = styled.div`
   }
 `;
 const ProfileContainer = styled.div`
+  .aws-btn {
+    margin-top: 15px;
+    --button-default-height: 51px;
+    --button-default-font-size: 14px;
+    --button-default-border-radius: 2px;
+    --button-horizontal-padding: 20px;
+    --button-raise-level: 8px;
+    --button-hover-pressure: 1;
+    --transform-speed: 0.175s;
+    --button-primary-color: #1e88e5;
+    --button-primary-color-dark: #1360a4;
+    --button-primary-color-light: #ffffff;
+    --button-primary-color-hover: #187bd1;
+    --button-primary-border: none;
+    --button-secondary-color: #f2f6f9;
+    --button-secondary-color-dark: #1360a4;
+    --button-secondary-color-light: #1e88e5;
+    --button-secondary-color-hover: #e1eaf1;
+    --button-secondary-border: 2px solid #1e88e5;
+    --button-anchor-color: #0e4f88;
+    --button-anchor-color-dark: #072743;
+    --button-anchor-color-light: #ffffff;
+    --button-anchor-color-hover: #0d4a7f;
+    --button-anchor-border: none;
+  }
   flex: 7;
   display: flex;
   flex-direction: column;
@@ -185,10 +212,14 @@ const HeroSection = (props) => {
             learning new things.Now I want to be a part of an Organization/Team
             to build production level code.
           </p>
+          <AwesomeButton className="aws-btn" size="medium">
+            Resume
+          </AwesomeButton>
         </ProfileContainer>
+
         <SocialLinks>
           <a
-            href="https://www.linkedin.com/in/novamaster/"
+            href="https://www.linkedin.com/in/soumen-samanta/"
             target="_blank"
             rel="noreferrer"
           >

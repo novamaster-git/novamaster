@@ -98,10 +98,9 @@ const ClientCard = (props) => {
               Dynamic Resume Site for a Researcher Fellow
             </ProjectTitle>
             <Discription>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Asperiores fuga atque architecto expedita commodi quos id nobis
-              earum quia adipisci, ratione deserunt sunt cupiditate culpa.
-              Repellendus similique voluptates consectetur voluptate!
+              Developed a Resume Site with Dynammic Content upload for a client.
+              Back-End is Developed using Node.js + Express. The Site is
+              fully-responsive for mobile and pc.
             </Discription>
             <p>Languages Used : </p>
             <TagContainer>
@@ -111,15 +110,17 @@ const ClientCard = (props) => {
               <Tag color="#6200EA">MySql</Tag>
               <Tag color="#B71C1C">Node.js + Express</Tag>
             </TagContainer>
-            <VisitButton>Visit Project</VisitButton>
+            <VisitButton href="https://biplabchem.com/" target="_blank">
+              Visit Project
+            </VisitButton>
           </ProjectCard>
           <ProjectCard>
             <ProjectTitle>Food delivery App REST API</ProjectTitle>
             <Discription>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Asperiores fuga atque architecto expedita commodi quos id nobis
-              earum quia adipisci, ratione deserunt sunt cupiditate culpa.
-              Repellendus similique voluptates consectetur voluptate!
+              Developed RESTful API for a shopping app called 'Nijarbazar',
+              Developed the full API for products Upload, Delivery Management.
+              For user Authentication, Here I used JSON Web Token (JWT). I
+              developed it using Laravel/PHP.
             </Discription>
             <p>Languages Used : </p>
             <TagContainer>
