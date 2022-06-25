@@ -29,7 +29,7 @@ const Skills = () => {
           {checked ? (
             <Row>
               <Column>
-                <h1 className="division-title">Front-End Skills</h1>
+                <h1 className="division-title">Web Apps Skills</h1>
                 <SkillsCard
                   title="html + css"
                   progress="85%"
@@ -41,11 +41,7 @@ const Skills = () => {
                   progress="80%"
                   color="linear-gradient(to right, #7f00ff, #e100ff)"
                 />
-                <SkillsCard
-                  title="React Native"
-                  progress="70%"
-                  color="linear-gradient(to right, #fc4a1a, #f7b733)"
-                />
+                
                 <SkillsCard
                   title="Bootstrap"
                   progress="90%"
@@ -53,27 +49,18 @@ const Skills = () => {
                 />
               </Column>
               <Column>
-                <h1 className="division-title">Back-End Skills</h1>
+                <h1 className="division-title">App Skills</h1>
                 <SkillsCard
-                  title="Node.js + express"
-                  progress="85%"
+                  title="React Native"
+                  progress="70%"
+                  color="linear-gradient(to right, #fc4a1a, #f7b733)"
+                />
+                <SkillsCard
+                  title="Android Native"
+                  progress="45%"
                   color="linear-gradient(to right, #f953c6, #b91d73)"
                 />
-                <SkillsCard
-                  title="MongoDB"
-                  progress="65%"
-                  color="linear-gradient(to right, #11998e, #38ef7d)"
-                />
-                <SkillsCard
-                  title="mysql"
-                  progress="60%"
-                  color="linear-gradient(to right, #ff9966, #ff5e62)"
-                />
-                <SkillsCard
-                  title="laravel"
-                  progress="70%"
-                  color="linear-gradient(to right, #cb2d3e, #ef473a)"
-                />
+                
               </Column>
             </Row>
           ) : (
@@ -86,25 +73,22 @@ const Skills = () => {
                   color="linear-gradient(to right, #ff8008, #ffc837)"
                 />
                 <SkillsCard
-                  title="java"
-                  progress="70%"
-                  color="linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);"
-                />
-                <SkillsCard
-                  title="C++"
+                  title="TypeScript"
                   progress="60%"
                   color="linear-gradient(to right, #cb2d3e, #ef473a)"
                 />
                 <SkillsCard
+                  title="java"
+                  progress="70%"
+                  color="linear-gradient(90deg, #f8ff00 0%, #3ad59f 100%);"
+                />
+                
+                <SkillsCard
                   title="php"
-                  progress="65%"
+                  progress="55%"
                   color="linear-gradient(to right, #00c6ff, #0072ff)"
                 />
-                <SkillsCard
-                  title="python"
-                  progress="75%"
-                  color="linear-gradient(to right, #c21500, #ffc500)"
-                />
+               
               </Column>
 
               <Column>
