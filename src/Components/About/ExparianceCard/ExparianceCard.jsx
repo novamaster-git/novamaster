@@ -136,7 +136,7 @@ const Title = styled.h2`
 `;
 
 const ExparianceCard = () => {
-  const [education, setEducation] = useState(false);
+  const [education, setEducation] = useState(true);
   const educationHandler = () => {
     setEducation(false);
   };
@@ -148,14 +148,14 @@ const ExparianceCard = () => {
       <Card>
         <Row>
           <Column>
+            <Title onClick={workHandler} className={education ? "active" : ""}>
+              <BsLightning className="icon" /> Experience
+            </Title>
             <Title
               onClick={educationHandler}
               className={education ? "" : "active"}
             >
               <BsAward className="icon" /> Education
-            </Title>
-            <Title onClick={workHandler} className={education ? "active" : ""}>
-              <BsLightning className="icon" /> Application
             </Title>
           </Column>
           <Column>
@@ -163,25 +163,33 @@ const ExparianceCard = () => {
               {!education ? (
                 <ul className="sessions">
                   <li>
-                    <div className="time">Secondary Education</div>
-                    <p>Hantal Bishalakshi High School</p>
-                  </li>
-                  <li>
-                    <div className="time">Higher Secondary</div>
-                    <p>Hantal Bishalakshi High School</p>
-                  </li>
-                  <li>
                     <div className="time">
                       Electronics And TeleCommunication
                     </div>
-                    <p>Ramakrishna Mission Shilpamandira</p>
+                    <p>Ramakrishna Mission Shilpamandira - 2021 / Sep</p>
+                  </li>
+                  <li>
+                    <div className="time">Higher Secondary</div>
+                    <p>Hantal Bishalakshi High School - 2018 / June</p>
+                  </li>
+                  <li>
+                    <div className="time">Secondary Education</div>
+                    <p>Hantal Bishalakshi High School - 2016</p>
                   </li>
                 </ul>
               ) : (
                 <ul className="sessions">
                   <li>
-                    <div className="time">As a Freelancer</div>
-                    <p>Since 2020</p>
+                    <div className="time">Weavers Web Solution</div>
+                    <p style={{ color: "#616161" }}>React Native Developer</p>
+                    <p>2022 / July - Present</p>
+                  </li>
+                  <li>
+                    <div className="time">Underscore Technology</div>
+                    <p style={{ color: "#616161" }}>
+                      React Native & Android App Developer
+                    </p>
+                    <p>2021 / October - 2022 / June</p>
                   </li>
                 </ul>
               )}

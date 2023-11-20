@@ -29,7 +29,7 @@ const Footer = (props) => {
       <FooterCard>
         <div className="copyright">
           <AiOutlineCopyrightCircle className="icon" />
-          2021
+          2023
         </div>
         <div className="copyright">
           <a

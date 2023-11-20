@@ -206,13 +206,19 @@ const HeroSection = (props) => {
         </ImageContainer>
         <ProfileContainer>
           <h1>Soumen Samanta</h1>
-          <p className="ability">MERN STACK DEVELOPER | ELECTRONICS ENGINEER</p>
+          <p className="ability">MOBILE APP DEVELOPER</p>
           <p className="desc">
-            I am a Self-Taught and motivated Programmer who is Passionate about
-            learning new things.Now I want to be a part of an Organization/Team
-            to build production level code.
+            Experienced React Native Developer with <b> 2+ years</b>, adept in
+            problem-solving, cross-platform development, and user-friendly
+            solutions. I also have a strong passion for working as a Full-stack
+            Mobile App Developer.
           </p>
-          <AwesomeButton className="aws-btn" size="medium">
+          <AwesomeButton
+            className="aws-btn"
+            size="medium"
+            href="https://drive.google.com/file/d/18w-iydF4IioTFsUohKKE44KmNb96Yj4C/view?usp=sharing"
+            target="_blank"
+          >
             Resume
           </AwesomeButton>
         </ProfileContainer>
@@ -231,13 +237,6 @@ const HeroSection = (props) => {
             rel="noreferrer"
           >
             <FaGithub className="icon-size" />
-          </a>
-          <a
-            href="https://codepen.io/nova_master"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaCodepen className="icon-size" />
           </a>
         </SocialLinks>
         <CardTitle top="80" right="-120">
