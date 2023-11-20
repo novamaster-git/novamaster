@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Profile from "../../res/img/Profile.jpg";
 import Goggles from "../../res/img/losisdos.png";
 import CardTitle from "../CardTitle/CardTitle";
-import { FaGithub, FaCodepen, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 const HeroContainer = styled.div`
   position: relative;
   top: 0;
