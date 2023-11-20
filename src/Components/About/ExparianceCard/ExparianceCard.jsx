@@ -2,7 +2,7 @@ import React, { Fragment, useState } from "react";
 import styled from "styled-components";
 import CardTitle from "../../CardTitle/CardTitle";
 import { BsAward, BsLightning } from "react-icons/bs";
-
+//codered
 const Card = styled.div`
   -webkit-box-shadow: 6px 6px 29px -15px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 6px 6px 29px -15px rgba(0, 0, 0, 0.75);
